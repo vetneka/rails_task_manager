@@ -5,7 +5,7 @@ class CreateTasks < ActiveRecord::Migration[6.1]
       t.text :description
       t.integer :author_id
       t.integer :assignee_id
-      t.string :state
+      t.string :state, default: :new_task
       t.date :expired_at
 
       t.timestamps
